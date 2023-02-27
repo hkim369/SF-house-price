@@ -6,7 +6,7 @@ newFeatures = st.container()
 modelTraining = st.container()
 
 with siteHeader:
-    st.title('Welcome to the Awesome project!')
+    st.title('Welcome to the Awesome project!!!')
     st.text('In this project I look into ... And I try ... I worked with the dataset from ...')
 
 with dataExploration:
