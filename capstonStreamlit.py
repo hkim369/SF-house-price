@@ -36,12 +36,12 @@ with SF:
     # Population and house price 
     fig, ax1 = plt.subplots(figsize = (10,6))
 
-    ax1.plot(population['YEAR'], population['POPULATION'], 'r-o')
+    ax1.plot(pd.to_datetime(population['YEAR']), population['POPULATION'], 'r-o')
     ax1.set_xlabel('Year')
     ax1.set_ylabel('Population')
 
     ax2 = ax1.twinx()
-    ax2.plot(saleSF.index[2::12], saleSF[2::12])
+    ax2.plot(pd.to_datetime(saleSF.index[2::12]), saleSF[2::12])
     ax2.set_ylabel('House sale price')
     ax2.set_xticks(saleSF.index[2::24])
     ax2.yaxis.set_major_formatter('${x:,.0f}')
