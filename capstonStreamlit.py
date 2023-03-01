@@ -41,7 +41,7 @@ with SF:
     ax1.set_ylabel('Population')
 
     ax2 = ax1.twinx()
-    ax2.plot(saleSF[2::12])
+    ax2.plot(saleSF.index[2::12], saleSF[2::12])
     ax2.set_ylabel('House sale price')
     ax2.set_xticks(saleSF.index[2::24])
     ax2.yaxis.set_major_formatter('${x:,.0f}')
