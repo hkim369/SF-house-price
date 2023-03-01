@@ -79,13 +79,13 @@ with OtherCounties:
 
     fig, ax1 = plt.subplots(figsize = (10,6))
     
-    ax1.plot(x2, Y2.loc[yourCounty], 'o-', color='r', label='Population')
+    ax1.plot(pd.to_datetime(x2), Y2.loc[yourCounty], 'o-', color='r', label='Population')
     ax1.set_xlabel('Year')
     ax1.set_ylabel('Population')
     
     ax2 = ax1.twinx()
     
-    ax2.plot(x1, Y1.loc[yourCounty, x1], color='b', label='House Price')
+    ax2.plot(pd.to_datetime(x1), Y1.loc[yourCounty, x1], color='b', label='House Price')
     ax2.set_xticks(x1[::2])
     ax2.set_ylabel('House sale price')
     ax2.yaxis.set_major_formatter('${x:,.0f}')
